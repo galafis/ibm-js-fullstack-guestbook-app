@@ -25,4 +25,4 @@ Este projeto reflete os conceitos ensinados nos módulos mais avançados do cert
 *   `LICENSE`: Licença MIT.
 *   `.gitignore`: Arquivo gitignore padrão para Node (gerado automaticamente).
 
-**Observação:** O código neste repositório consiste apenas em placeholders e estrutura de pastas, focando em demonstrar a arquitetura conceitual de uma aplicação full-stack de forma concisa, conforme a solicitação de economia de recursos. Não inclui código funcional de integração ou conexão com banco de dados.
+**Observação:** O código neste repositório consiste apenas em placeholders e estrutura de pastas, focando em demonstrar a arquitetura conceitual de uma aplicação full-stack de forma concisa. Não inclui código funcional de integração ou conexão com banco de dados.
