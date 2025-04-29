@@ -1,6 +1,6 @@
 # Repositório: App Guestbook Full-Stack (IBM Full-Stack JS)
 
-Este repositório demonstra a compreensão da **integração full-stack** utilizando tecnologias como **React**, **Node.js** e **NoSQL**, conforme aprendido no programa **IBM Full-Stack JavaScript Developer Professional Certificate**.
+Este repositório, feito por mim, demonstra a compreensão da **integração full-stack** utilizando tecnologias como **React**, **Node.js** e **NoSQL**, conforme aprendido no programa **IBM Full-Stack JavaScript Developer Professional Certificate**.
 
 ## Objetivo
 
