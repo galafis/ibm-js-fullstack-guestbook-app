@@ -1,0 +1,8 @@
+{
+  "name": "ibm-js-fullstack-guestbook-app",
+  "version": "1.0.0",
+  "description": "> Demonstração de Integração Full-Stack: React, Node, NoSQL (IBM Full-Stack JS Cert)",
+  "main": "index.js",
+  "scripts": {},
+  "license": "MIT"
+}
