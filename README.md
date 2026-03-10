@@ -1,116 +1,98 @@
-# 🚀 Ibm Js Fullstack Guestbook App
+# Guestbook Application
 
-> Demonstração de Integração Full-Stack: React, Node, NoSQL (IBM Full-Stack JS Cert)
+> IBM Full-Stack JavaScript Developer Certificate
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES2024-F7DF1E.svg)](https://img.shields.io/badge/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org)
 
-[English](#english) | [Português](#português)
+[English](#english) | [Portugues](#portugues)
 
 ---
 
 ## English
 
-### 🎯 Overview
+### Overview
 
-**Ibm Js Fullstack Guestbook App** is a production-grade JavaScript application that showcases modern software engineering practices including clean architecture, comprehensive testing, containerized deployment, and CI/CD readiness.
+**Guestbook Application** is a full-stack web application built with Node.js and Express. Visitors can sign the guestbook by posting messages, view all entries in reverse chronological order, and delete individual messages. Data is persisted using a JSON file-based storage system.
 
-The codebase comprises **29 lines** of source code organized across **2 modules**, following industry best practices for maintainability, scalability, and code quality.
+### Key Features
 
-### ✨ Key Features
+- **REST API**: CRUD endpoints for guestbook entries (GET, POST, DELETE)
+- **JSON Storage**: File-based persistence without requiring a database
+- **Responsive Frontend**: Clean, modern UI with vanilla HTML, CSS, and JavaScript
+- **Real-time Feedback**: Status messages, relative timestamps, and smooth interactions
+- **Input Validation**: Server-side and client-side validation for all inputs
 
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Architecture
+### Architecture
 
 ```mermaid
-graph TB
-    subgraph Core["🏗️ Core"]
-        A[Main Module]
-        B[Business Logic]
-        C[Data Processing]
+graph LR
+    subgraph Client["Browser"]
+        A[index.html] --> B[app.js]
+        A --> C[style.css]
     end
-    
-    subgraph Support["🔧 Support"]
-        D[Configuration]
-        E[Utilities]
-        F[Tests]
+
+    subgraph Server["Node.js / Express"]
+        D[index.js<br>Routes] --> E[database.js<br>JSON Storage]
+        E --> F[entries.json<br>Data File]
     end
-    
-    A --> B --> C
-    D --> A
-    E --> B
-    F -.-> B
-    
-    style Core fill:#e1f5fe
-    style Support fill:#f3e5f5
+
+    B -->|fetch API| D
+    D -->|JSON response| B
+
+    style Client fill:#e1f5fe
+    style Server fill:#e8f5e9
 ```
 
-### 🚀 Quick Start
-
-#### Prerequisites
-
-- Node.js 20+
-- npm or yarn
-
-#### Installation
+### Quick Start
 
 ```bash
-# Clone the repository
 git clone https://github.com/galafis/ibm-js-fullstack-guestbook-app.git
 cd ibm-js-fullstack-guestbook-app
-
-# Install dependencies
 npm install
-```
-
-#### Running
-
-```bash
-# Development mode
-npm run dev
-
-# Production build
-npm run build
 npm start
 ```
 
-### 📁 Project Structure
+Then open http://localhost:3000
+
+### API Endpoints
+
+| Method | Endpoint           | Description           |
+|--------|-------------------|-----------------------|
+| GET    | /api/entries      | List all entries      |
+| POST   | /api/entries      | Create new entry      |
+| DELETE | /api/entries/:id  | Delete entry by ID    |
+| GET    | /api/stats        | Get entry count       |
+
+### Project Structure
 
 ```
 ibm-js-fullstack-guestbook-app/
-├── client/
-│   └── client_placeholder.js
 ├── server/
-│   └── server_placeholder.js
-├── LICENSE
+│   ├── index.js          # Express server and routes
+│   └── database.js       # JSON file storage
+├── public/
+│   ├── index.html        # Frontend HTML
+│   ├── style.css         # Styles
+│   └── app.js            # Frontend JavaScript
+├── package.json
 └── README.md
 ```
 
-### 🛠️ Tech Stack
+### Tech Stack
 
-| Technology | Description | Role |
-|------------|-------------|------|
-| **JavaScript** | Core Language | Primary |
+| Technology  | Role              |
+|------------|-------------------|
+| Node.js    | Runtime           |
+| Express    | Web framework     |
+| HTML/CSS   | Frontend markup   |
+| JavaScript | Client logic      |
 
-### 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### 📄 License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### 👤 Author
+### Author
 
 **Gabriel Demetrios Lafis**
 - GitHub: [@galafis](https://github.com/galafis)
@@ -118,102 +100,36 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## Português
+## Portugues
 
-### 🎯 Visão Geral
+### Visao Geral
 
-**Ibm Js Fullstack Guestbook App** é uma aplicação JavaScript de nível profissional que demonstra práticas modernas de engenharia de software, incluindo arquitetura limpa, testes abrangentes, implantação containerizada e prontidão para CI/CD.
+**Guestbook Application** e uma aplicacao web full-stack construida com Node.js e Express. Visitantes podem assinar o livro de visitas postando mensagens, visualizar todas as entradas em ordem cronologica reversa e deletar mensagens individuais. Os dados sao persistidos usando um sistema de armazenamento baseado em arquivo JSON.
 
-A base de código compreende **29 linhas** de código-fonte organizadas em **2 módulos**, seguindo as melhores práticas do setor para manutenibilidade, escalabilidade e qualidade de código.
+### Funcionalidades Principais
 
-### ✨ Funcionalidades Principais
+- **API REST**: Endpoints CRUD para entradas do livro de visitas (GET, POST, DELETE)
+- **Armazenamento JSON**: Persistencia baseada em arquivo sem necessidade de banco de dados
+- **Frontend Responsivo**: Interface limpa e moderna com HTML, CSS e JavaScript puros
+- **Feedback em Tempo Real**: Mensagens de status, timestamps relativos e interacoes suaves
+- **Validacao de Entrada**: Validacao no servidor e no cliente para todos os inputs
 
-- **📐 Clean Architecture**: Modular design with clear separation of concerns
-- **🧪 Test Coverage**: Unit and integration tests for reliability
-- **📚 Documentation**: Comprehensive inline documentation and examples
-- **🔧 Configuration**: Environment-based configuration management
-
-### 🏗️ Arquitetura
-
-```mermaid
-graph TB
-    subgraph Core["🏗️ Core"]
-        A[Main Module]
-        B[Business Logic]
-        C[Data Processing]
-    end
-    
-    subgraph Support["🔧 Support"]
-        D[Configuration]
-        E[Utilities]
-        F[Tests]
-    end
-    
-    A --> B --> C
-    D --> A
-    E --> B
-    F -.-> B
-    
-    style Core fill:#e1f5fe
-    style Support fill:#f3e5f5
-```
-
-### 🚀 Início Rápido
-
-#### Prerequisites
-
-- Node.js 20+
-- npm or yarn
-
-#### Installation
+### Inicio Rapido
 
 ```bash
-# Clone the repository
 git clone https://github.com/galafis/ibm-js-fullstack-guestbook-app.git
 cd ibm-js-fullstack-guestbook-app
-
-# Install dependencies
 npm install
-```
-
-#### Running
-
-```bash
-# Development mode
-npm run dev
-
-# Production build
-npm run build
 npm start
 ```
 
-### 📁 Estrutura do Projeto
+Depois abra http://localhost:3000
 
-```
-ibm-js-fullstack-guestbook-app/
-├── client/
-│   └── client_placeholder.js
-├── server/
-│   └── server_placeholder.js
-├── LICENSE
-└── README.md
-```
+### Licenca
 
-### 🛠️ Stack Tecnológica
+Este projeto esta licenciado sob a Licenca MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
-| Tecnologia | Descrição | Papel |
-|------------|-----------|-------|
-| **JavaScript** | Core Language | Primary |
-
-### 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
-
-### 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-### 👤 Autor
+### Autor
 
 **Gabriel Demetrios Lafis**
 - GitHub: [@galafis](https://github.com/galafis)

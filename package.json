@@ -1,8 +1,14 @@
 {
   "name": "ibm-js-fullstack-guestbook-app",
   "version": "1.0.0",
-  "description": "> Demonstração de Integração Full-Stack: React, Node, NoSQL (IBM Full-Stack JS Cert)",
-  "main": "index.js",
-  "scripts": {},
+  "description": "Full-stack guestbook application built with Node.js, Express, and vanilla JavaScript",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
   "license": "MIT"
 }
