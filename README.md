@@ -3,6 +3,7 @@
 > IBM Full-Stack JavaScript Developer Certificate
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker)](Dockerfile)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org)
 
 [English](#english) | [Portugues](#portugues)
